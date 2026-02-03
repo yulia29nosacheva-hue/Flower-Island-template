@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Island - Fresh Flowers for Every Occasion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+ </head>
+ <body>
+ <!-- Header -->
+  <header class="header">
+    <div class="header-row-1">
+
+        <!-- Бургер -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Логотип -->
+        <div class="logo">
+            <span class="logo-text">Flower Island</span>
+        </div>
+         <!-- ✅ МЕНЮ ЗДЕСЬ -->
+    <nav class="nav desktop-nav">
+        <ul class="nav-menu">
+            <li><a href="#flowers">Home</a></li>
+            <li><a href="#best-sellers">Catalog</a></li>
+            <li><a href="#latest-posts">services</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+           <!-- ДЕСКТОПНЫЙ ПОИСК -->
+        <div class="desktop-search">
+            <div class="desktop-search-container">
+                <input type="text" class="desktop-search-input" placeholder="Поиск товаров...">
+                <button class="desktop-search-btn">
+                    <img src="images/Vector.png" alt="Поиск">
+                </button>
+            </div>
+        </div>
+        <!-- Иконки -->
+        <div class="header-actions">
+            <button class="btn-user">
+                <img src="images/user.svg" class="user-icon">
+            </button>
+            <button class="btn-cart">
+                <img src="images/corzina.svg" class="cart-icon">
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <div class="logo">
+            <span class="logo-text">Flower Island</span>
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose">
+            <span>&times;</span>
+        </button>
+    </div>
+    <ul class="mobile-nav-menu">
+        <li><a href="#flowers" class="mobile-nav-link">Flowers</a></li>
+        <li><a href="#best-sellers" class="mobile-nav-link">Best Sellers</a></li>
+        <li><a href="#latest-posts" class="mobile-nav-link">Blog</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li><a href="cart.html" class="mobile-nav-link">Cart</a></li>
+        <li><a href="login.html" class="mobile-nav-link">Login</a></li>
+        <li><a href="registration.html" class="mobile-nav-link">Register</a></li>
+    </ul>
+    </nav>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+       <!-- ================= MAIN HOME ================= -->
+        <main class="home">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-container">
+                    <!-- Left Gallery -->
+                    <div class="hero-gallery">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="images/1.svg" alt="Flower 1">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/2.svg" alt="Flower 2">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/3.svg" alt="Flower 3">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/4.svg" alt="Flower 4">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/5.svg" alt="Flower 5">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/6.svg" alt="Flower 6">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Content -->
+                    <div class="hero-content">
+                        <h1 class="hero-title">The world<br>needs beauty<br>in petal</br></h1>
+                        <button class="hero-btn">Перейти</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Top Seller Section -->
+            <section class="top-seller-section">
+                <div class="top-seller-container">
+                    <h2 class="top-seller-title">
+                        <span class="title-line"></span>
+                        Top seller
+                        <span class="title-line"></span>
+                    </h2>
+
+                    <div class="top-seller-grid">
+                        <div class="seller-card">
+                            <div class="seller-image">
+                                <img src="images/Daisy.svg" alt="Daisy">
+                            </div>
+                            <div class="seller-info">
+                                <h3 class="seller-name">Daisy</h3>
+                                <div class="seller-price-row">
+                                    <p class="seller-price">$5</p>
+                                    <button class="seller-btn-text btn-add-cart" data-product-id="1" data-product-name="Daisy" data-product-price="5" data-product-image="images/Daisy.svg">
+                                        <img src="images/corzina.svg" alt="Cart" class="cart-icon">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card">
+                            <div class="seller-image">
+                                <img src="images/sun flower.svg" alt="Sun Flower">
+                            </div>
+                            <div class="seller-info">
+                                <h3 class="seller-name">Sun flower</h3>
+                                <div class="seller-price-row">
+                                    <p class="seller-price">$5</p>
+                                    <button class="seller-btn-text btn-add-cart" data-product-id="2" data-product-name="Sun flower" data-product-price="5" data-product-image="images/sun flower.svg">
+                                        <img src="images/corzina.svg" alt="Cart" class="cart-icon">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card">
+                            <div class="seller-image">
+                                <img src="images/White Rose.svg" alt="White Rose">
+                            </div>
+                            <div class="seller-info">
+                                <h3 class="seller-name">White Rose</h3>
+                                <div class="seller-price-row">
+                                    <p class="seller-price">$5</p>
+                                    <button class="seller-btn-text btn-add-cart" data-product-id="3" data-product-name="White Rose" data-product-price="5" data-product-image="images/White Rose.svg">
+                                        <img src="images/corzina.svg" alt="Cart" class="cart-icon">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card">
+                            <div class="seller-image">
+                                <img src="images/dahlia.svg" alt="Dahlia">
+                            </div>
+                            <div class="seller-info">
+                                <h3 class="seller-name">dahlia</h3>
+                                <div class="seller-price-row">
+                                    <p class="seller-price">$5</p>
+                                    <button class="seller-btn-text btn-add-cart" data-product-id="5" data-product-name="dahlia" data-product-price="5" data-product-image="images/dahlia.svg">
+                                        <img src="images/corzina.svg" alt="Cart" class="cart-icon">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Best Sellers Section -->
+            <section class="latest-posts-section">
+                <div class="latest-posts-container">
+                    <h2 class="latest-posts-title">
+                        <span class="title-line"></span>
+                        Latest news
+                        <span class="title-line"></span>
+                    </h2>
+                    <div class="latest-posts-grid">
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <img src="images/Ellipse 8.svg" alt="Emily" class="author-avatar">
+                                    <span class="author-name">Emily</span>
+                                </div>
+                                <span class="post-date">2022/22/8</span>
+                            </div>
+                            <div class="post-image">
+                                <img src="images/foto1.svg" alt="Post 1">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">beautiful flowers for home</h3>
+                                <p class="post-description">All the flowers are perfect for your cozy home. Choose the one you like best 😊</p>
+                                <div class="post-footer">
+                                    <div class="post-icons">
+                                        <img src="images/Vector-5.svg" alt="Icon 1" class="post-icon"><p>15</p>
+                                        <img src="images/Vector6.svg" alt="Icon 2" class="post-icon"><p>2001</p>
+                                    </div>
+                                    <a href="#" class="read-more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <img src="images/Ellipse 8.svg" alt="Emily" class="author-avatar">
+                                    <span class="author-name">Emily</span>
+                                </div>
+                                <span class="post-date">2022/22/8</span>
+                            </div>
+                            <div class="post-image">
+                                <img src="images/foto2.svg" alt="Post 2">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">beautiful flowers for home</h3>
+                                <p class="post-description">All the flowers are perfect for your cozy home. Choose the one you like best 😊</p>
+                                <div class="post-footer">
+                                    <div class="post-icons">
+                                        <img src="images/Vector-5.svg" alt="Icon 1" class="post-icon"><p>15</p>
+                                        <img src="images/Vector6.svg" alt="Icon 2" class="post-icon"><p>2001</p>
+                                    </div>
+                                    <a href="#" class="read-more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-author">
+                                    <img src="images/Ellipse 8.svg" alt="Emily" class="author-avatar">
+                                    <span class="author-name">Emily</span>
+                                </div>
+                                <span class="post-date">2022/22/8</span>
+                            </div>
+                            <div class="post-image">
+                                <img src="images/foto3.svg" alt="Post 3">
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-title">beautiful flowers for home</h3>
+                                <p class="post-description">All the flowers are perfect for your cozy home. Choose the one you like best 😊</p>
+                                <div class="post-footer">
+                                    <div class="post-icons">
+                                        <img src="images/Vector-5.svg" alt="Icon 1" class="post-icon"><p>15</p>
+                                        <img src="images/Vector6.svg" alt="Icon 2" class="post-icon"><p>2001</p>
+                                    </div>
+                                    <a href="#" class="read-more">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- People's Comments Section -->
+        <section class="people-comments-section">
+            <div class="people-comments-container">
+                <h2 class="people-comments-title">
+                    <span class="title-line"></span>
+                    people's comments
+                    <span class="title-line"></span>
+                </h2>
+                <div class="comments-grid">
+                    <div class="comment-card">
+                            <div class="comment-header">
+                                <img src="images/alana.svg" alt="Alana" class="comment-avatar">
+                                <div class="comment-author">
+                                    <h4 class="author-name">Alana</h4>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p class="comment-text">"Bud to bud! The roses are very fragrant, filling the entire room with their scent. Very pleased with the quality."</p>
+                                <div class="comment-stars">
+                                    <img src="images/Star 1.svg" alt="Star" class="star">
+                                    <img src="images/Star 1.svg" alt="Star" class="star">
+                                    <img src="images/Star 1.svg" alt="Star" class="star">
+                                    <img src="images/Star 1.svg" alt="Star" class="star">
+                                    <img src="images/Star 1.svg" alt="Star" class="star">
+                                </div>
+                            </div>
+                        </div>
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <img src="images/alex.svg" alt="Alex" class="comment-avatar">
+                            <div class="comment-author">
+                                <h4 class="author-name">Alex</h4>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p class="comment-text">"I ordered lilies, they arrived with closed buds—just what I needed to make them last longer.</p>
+                            <div class="comment-stars">
+                                <img src="images/Star 1.svg" alt="Star" class="star">
+                                <img src="images/Star 1.svg" alt="Star" class="star">
+                                <img src="images/Star 1.svg" alt="Star" class="star">
+                                <img src="images/Star 1.svg" alt="Star" class="star">
+                                <img src="images/Star 1.svg" alt="Star" class="star">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-card">
+                        <div class="comment-header">
+                            <img src="images/Young Girl.svg" alt="Young Girl" class="comment-avatar">
+                            <div class="comment-author">
+                                <h4 class="author-name">Young Girl</h4>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p class="comment-text">The bouquet looks even better and more voluminous in person than in the catalog photo. Expectations were 100% met.".</p>
+                        </div>
+                        <div class="comment-stars">
+                            <img src="images/Star 1.svg" alt="Star" class="star">
+                            <img src="images/Star 1.svg" alt="Star" class="star">
+                            <img src="images/Star 1.svg" alt="Star" class="star">
+                            <img src="images/Star 1.svg" alt="Star" class="star">
+                            <img src="images/Star 1.svg" alt="Star" class="star">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Flower Island</h3>
+                    <p>Your trusted source for fresh, beautiful flowers since 2020.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#flowers">Shop Flowers</a></li>
+                        <li><a href="#best-sellers">Best Sellers</a></li>
+                        <li><a href="#latest-posts">Blog</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📧 hello@flowerisland.com</li>
+                        <li>📞 1-800-FLOWERS</li>
+                        <li>📍 123 Garden Street, Bloom City</li>
+                        <li>🕐 Mon-Fri: 9AM-6PM</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </body>
+        </html>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+    <script src="search.js"></script>
+    <script>
+        // Mobile Menu Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'mobile-nav-overlay';
+            document.body.appendChild(overlay);
+            
+            function openMobileMenu() {
+                mobileNav.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeMobileMenu() {
+                mobileNav.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            // Toggle menu
+            mobileMenuToggle.addEventListener('click', openMobileMenu);
+            
+            // Close menu
+            mobileNavClose.addEventListener('click', closeMobileMenu);
+            overlay.addEventListener('click', closeMobileMenu);
+            
+            // Close menu when clicking links
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    closeMobileMenu();
+                });
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+        
+        // ===== АДАПТИВНОЕ НАВИГАЦИОННОЕ МЕНЮ =====
+        class MobileMenuManager {
+            constructor() {
+                this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                this.mobileNav = document.getElementById('mobileNav');
+                this.mobileNavOverlay = document.getElementById('mobileNavOverlay');
+                this.mobileNavClose = document.getElementById('mobileNavClose');
+                
+                this.init();
+            }
+            
+            init() {
+                // Клик на гамбургер - открытие/закрытие меню
+                this.mobileMenuToggle?.addEventListener('click', () => {
+                    this.toggleMobileMenu();
+                });
+                
+                // Клик на кнопку закрытия
+                this.mobileNavClose?.addEventListener('click', () => {
+                    this.closeMobileMenu();
+                });
+                
+                // Клик на overlay - закрытие меню
+                this.mobileNavOverlay?.addEventListener('click', () => {
+                    this.closeMobileMenu();
+                });
+                
+                // Закрытие меню при клике на пункт меню
+                const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        this.closeMobileMenu();
+                    });
+                });
+                
+                // Закрытие меню при нажатии ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.mobileNav?.classList.contains('active')) {
+                        this.closeMobileMenu();
+                    }
+                });
+            }
+            
+            toggleMobileMenu() {
+                const isActive = this.mobileNav?.classList.contains('active');
+                
+                if (isActive) {
+                    this.closeMobileMenu();
+                } else {
+                    this.openMobileMenu();
+                }
+            }
+            
+            openMobileMenu() {
+                // Добавляем классы для открытия меню
+                this.mobileMenuToggle?.classList.add('active');
+                this.mobileNav?.classList.add('active');
+                this.mobileNavOverlay?.classList.add('active');
+                
+                // Блокируем скролл body
+                document.body.style.overflow = 'hidden';
+            }
+            
+            closeMobileMenu() {
+                // Удаляем классы для закрытия меню
+                this.mobileMenuToggle?.classList.remove('active');
+                this.mobileNav?.classList.remove('active');
+                this.mobileNavOverlay?.classList.remove('active');
+                
+                // Возвращаем скролл body
+                document.body.style.overflow = '';
+            }
+        }
+        
+        // Initialize cart functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Инициализируем мобильное меню
+            const mobileMenuManager = new MobileMenuManager();
+            
+            const cartManager = new CartManager();
+            
+            // Add to cart functionality for all add to cart buttons
+            const addToCartBtns = document.querySelectorAll('.btn-add-cart');
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const product = {
+                        id: parseInt(btn.dataset.productId),
+                        name: btn.dataset.productName,
+                        price: parseFloat(btn.dataset.productPrice),
+                        image: btn.dataset.productImage,
+                        description: `${btn.dataset.productName.toLowerCase()} flower`
+                    };
+                    cartManager.addToCart(product);
+                });
+            });
+        });
+    </script>
+    
+    <script>
+        // Simple Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+            const mobileNavClose = document.getElementById('mobileNavClose');
+            
+            if (mobileMenuToggle && mobileNav && mobileNavOverlay) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileNav.classList.toggle('active');
+                    mobileNavOverlay.classList.toggle('active');
+                    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+                });
+                
+                if (mobileNavClose) {
+                    mobileNavClose.addEventListener('click', function() {
+                        mobileNav.classList.remove('active');
+                        mobileNavOverlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                }
+                
+                mobileNavOverlay.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                    mobileNavOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+    </script>
