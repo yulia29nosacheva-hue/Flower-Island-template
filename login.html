@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Island - Fresh Flowers for Every Occasion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+ </head>
+<body>
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-content">
+                <!-- Left Column - Image -->
+                <div class="login-image">
+                    <img src="images/Rectangle 49.svg" alt="Flower Background" class="login-bg">
+                </div>
+
+                <!-- Right Column - Login Form -->
+                <div class="login-form-container">
+                    <div class="login-header">
+                        <h2 class="login-title">Login</h2>
+                        <div class="login-header-right">
+                            <a href="index.html" class="back-home">
+                                <img src="images/house-solid 1.svg" alt="Home" class="home-icon">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <p class="login-subtitle">Login and have more fun</p>
+                    
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="remember" name="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="login-btn">Login</button>
+                    </form>
+                    
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="registration.html" class="register-link">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login Successful! 🎉</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Welcome back to Flower Island!</p>
+                <p>You can now continue shopping for beautiful flowers.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="continue-shopping-btn" onclick="window.location.href='index.html'">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const successModal = document.getElementById('success-modal');
+            const closeModal = document.querySelector('.close-modal');
+            
+            // Load remembered user if exists
+            const rememberedUser = localStorage.getItem('rememberedUser');
+            if (rememberedUser) {
+                document.getElementById('username').value = rememberedUser;
+                document.getElementById('remember').checked = true;
+            }
+            
+            // Handle form submission
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(loginForm);
+                const username = formData.get('username');
+                const password = formData.get('password');
+                const remember = formData.get('remember');
+                
+                // Check if user exists (in real app, this would be server validation)
+                const users = JSON.parse(localStorage.getItem('users') || '[]');
+                const user = users.find(u => u.email === username || u.username === username);
+                
+                if (user && user.password === password) {
+                    // Remember user if checkbox is checked
+                    if (remember) {
+                        localStorage.setItem('rememberedUser', username);
+                    } else {
+                        localStorage.removeItem('rememberedUser');
+                    }
+                    
+                    // Set current user session
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    
+                    // Use AuthManager to login
+                    authManager.login(user);
+                    
+                    // Show success modal
+                    successModal.style.display = 'block';
+                } else {
+                    // Try to check registration data
+                    const registeredUser = JSON.parse(localStorage.getItem('user') || '{}');
+                    if ((registeredUser.email === username || registeredUser.firstName === username) && registeredUser.password === password) {
+                        // Remember user if checkbox is checked
+                        if (remember) {
+                            localStorage.setItem('rememberedUser', username);
+                        } else {
+                            localStorage.removeItem('rememberedUser');
+                        }
+                        
+                        // Set current user session
+                        localStorage.setItem('currentUser', JSON.stringify(registeredUser));
+                        
+                        // Use AuthManager to login
+                        authManager.login(registeredUser);
+                        
+                        // Show success modal
+                        successModal.style.display = 'block';
+                    } else {
+                        alert('Invalid username or password!');
+                    }
+                }
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', () => {
+                successModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
