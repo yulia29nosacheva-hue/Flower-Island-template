@@ -7,503 +7,237 @@
     <link rel="stylesheet" href="css/styles.css">
  </head>
 <body>
-   <header class="header">
-    <div class="header-row-1">
 
-        <!-- Бургер -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
-
-        <!-- Логотип -->
-        <div class="logo">
-            <span class="logo-text">Flower Island</span>
-        </div>
-         <!-- ✅ МЕНЮ ЗДЕСЬ -->
-    <nav class="nav desktop-nav">
-        <ul class="nav-menu">
-            <li><a href="#flowers">Flowers</a></li>
-            <li><a href="#best-sellers">Best Sellers</a></li>
-            <li><a href="#latest-posts">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-           <!-- ДЕСКТОПНЫЙ ПОИСК -->
-        <div class="desktop-search">
-            <div class="desktop-search-container">
-                <input type="text" class="desktop-search-input" placeholder="Поиск товаров...">
-                <button class="desktop-search-btn">
-                    <img src="images/Vector.png" alt="Поиск">
-                </button>
-            </div>
-        </div>
-        <!-- Иконки -->
-        <div class="header-actions">
-            <button class="btn-user">
-                <img src="images/user.svg" class="user-icon">
-            </button>
-            <button class="btn-cart">
-                <img src="images/corzina.svg" class="cart-icon">
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Mobile Navigation -->
-<nav class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-header">
-        <div class="logo">
-            <span class="logo-text">Flower Island</span>
-        </div>
-        <button class="mobile-nav-close" id="mobileNavClose">
-            <span>&times;</span>
-        </button>
-    </div>
-    <ul class="mobile-nav-menu">
-        <li><a href="#flowers" class="mobile-nav-link">Flowers</a></li>
-        <li><a href="#best-sellers" class="mobile-nav-link">Best Sellers</a></li>
-        <li><a href="#latest-posts" class="mobile-nav-link">Blog</a></li>
-        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-        <li><a href="cart.html" class="mobile-nav-link">Cart</a></li>
-        <li><a href="login.html" class="mobile-nav-link">Login</a></li>
-        <li><a href="registration.html" class="mobile-nav-link">Register</a></li>
-    </ul>
-    </nav>
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
-</header>
-
-        <!-- Main Content -->
-        <!-- ================= MAIN ================= -->
-        <main class="product-search">
-            <!-- Product Search Section -->
-            <section class="product-search-section">
-                <div class="product-search-container">
-                    <!-- Search Header -->
-                    <div class="search-header">
-                        <div class="search-controls">
-                            <div class="search-container">
-                                <div class="filter-button" id="filterBtn">
-                                    <img src="images/Vector (9).svg" alt="Filter" class="filter-icon">
-                                    <span class="filter-text">Filtering</span>
+    <!-- Main Content -->
+    <main class="product-search">
+        <!-- Product Search Section -->
+        <section class="product-search-section">
+            <div class="product-search-container">
+                <!-- Search Header -->
+                <div class="search-header">
+                    <div class="search-controls">
+                        <div class="search-container">
+                            <div class="filter-button" id="filterBtn">
+                                <img src="images/Vector (9).svg" alt="Filter" class="filter-icon">
+                                <span class="filter-text">Filtering</span>
+                            </div>
+                            <div class="search-bar">
+                                <div class="search-input-wrapper">
+                                    <input type="text" class="search-input-main" placeholder="Search..." id="mainSearchInput">
+                                    <img src="images/Vector.png" alt="Search" class="search-input-icon">
                                 </div>
-                                <div class="search-bar">
-                                    <div class="search-input-wrapper">
-                                        <input type="text" class="search-input-main" placeholder="Search..." id="mainSearchInput">
-                                        <img src="images/Vector.png" alt="Search" class="search-input-icon">
-                                    </div>
-                                </div>
-                                <div class="cheap-badge">
-                                    <img src="images/znahok.png" alt="Cheap" class="cheap-icon">
-                                    <span class="cheap-text">Cheep</span>
+                            </div>
+                            <div class="cheap-badge">
+                                <img src="images/znahok.png" alt="Cheap" class="cheap-icon">
+                                <span class="cheap-text">Cheep</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="product-search-grid">
+                    <!-- Первый ряд -->
+                    <div class="product-search-card" data-name="Dahlia">
+                        <div class="product-search-image">
+                            <img src="images/dahlia.svg" alt="Dahlia">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Dahlia</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Product Grid -->
-                    <div class="product-search-grid">
-                        <!-- Первый ряд -->
-                        <div class="product-search-card" data-name="Dahlia">
-                            <div class="product-search-image">
-                                <img src="images/dahlia.svg" alt="Dahlia">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Dahlia</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
+                    
+                    <div class="product-search-card" data-name="Daisy">
+                        <div class="product-search-image">
+                            <img src="images/Daisy.svg" alt="Daisy">
                         </div>
-                        
-                        <div class="product-search-card" data-name="Daisy">
-                            <div class="product-search-image">
-                                <img src="images/Daisy.svg" alt="Daisy">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Daisy</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="Sun flower">
-                            <div class="product-search-image">
-                                <img src="images/sun flower.svg" alt="Sun flower">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Sun flower</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="White Rose">
-                            <div class="product-search-image">
-                                <img src="images/White Rose.svg" alt="White Rose">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">White Rose</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Второй ряд -->
-                        <div class="product-search-card" data-name="Dahlia">
-                            <div class="product-search-image">
-                                <img src="images/dahlia.svg" alt="Dahlia">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Dahlia</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="Daisy">
-                            <div class="product-search-image">
-                                <img src="images/Daisy.svg" alt="Daisy">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Daisy</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="Sun flower">
-                            <div class="product-search-image">
-                                <img src="images/sun flower.svg" alt="Sun flower">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Sun flower</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="White Rose">
-                            <div class="product-search-image">
-                                <img src="images/White Rose.svg" alt="White Rose">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">White Rose</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Третий ряд -->
-                        <div class="product-search-card" data-name="Dahlia">
-                            <div class="product-search-image">
-                                <img src="images/dahlia.svg" alt="Dahlia">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Dahlia</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="Daisy">
-                            <div class="product-search-image">
-                                <img src="images/Daisy.svg" alt="Daisy">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Daisy</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="Sun flower">
-                            <div class="product-search-image">
-                                <img src="images/sun flower.svg" alt="Sun flower">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">Sun flower</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-search-card" data-name="White Rose">
-                            <div class="product-search-image">
-                                <img src="images/White Rose.svg" alt="White Rose">
-                            </div>
-                            <div class="product-search-info">
-                                <h3 class="product-search-name">White Rose</h3>
-                                <div class="product-search-price-section">
-                                    <p class="product-search-price">$5</p>
-                                    <div class="product-search-cart-action">
-                                        <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
-                                        <span class="product-search-add-text">Add to cart</span>
-                                    </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Daisy</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- No Results Message -->
-                    <div class="no-results" id="noResults" style="display: none;">
-                        <h3>No products found</h3>
-                        <p>Try searching with different keywords</p>
+                    
+                    <div class="product-search-card" data-name="Sun flower">
+                        <div class="product-search-image">
+                            <img src="images/sun flower.svg" alt="Sun flower">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Sun flower</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="White Rose">
+                        <div class="product-search-image">
+                            <img src="images/White Rose.svg" alt="White Rose">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">White Rose</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Второй ряд -->
+                    <div class="product-search-card" data-name="Dahlia">
+                        <div class="product-search-image">
+                            <img src="images/dahlia.svg" alt="Dahlia">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Dahlia</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="Daisy">
+                        <div class="product-search-image">
+                            <img src="images/Daisy.svg" alt="Daisy">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Daisy</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="Sun flower">
+                        <div class="product-search-image">
+                            <img src="images/sun flower.svg" alt="Sun flower">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Sun flower</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="White Rose">
+                        <div class="product-search-image">
+                            <img src="images/White Rose.svg" alt="White Rose">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">White Rose</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Третий ряд -->
+                    <div class="product-search-card" data-name="Dahlia">
+                        <div class="product-search-image">
+                            <img src="images/dahlia.svg" alt="Dahlia">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Dahlia</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="Daisy">
+                        <div class="product-search-image">
+                            <img src="images/Daisy.svg" alt="Daisy">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Daisy</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="Sun flower">
+                        <div class="product-search-image">
+                            <img src="images/sun flower.svg" alt="Sun flower">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">Sun flower</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-search-card" data-name="White Rose">
+                        <div class="product-search-image">
+                            <img src="images/White Rose.svg" alt="White Rose">
+                        </div>
+                        <div class="product-search-info">
+                            <h3 class="product-search-name">White Rose</h3>
+                            <div class="product-search-price-section">
+                                <p class="product-search-price">$5</p>
+                                <div class="product-search-cart-action">
+                                    <img src="images/corzina.svg" alt="Cart" class="product-search-cart-icon">
+                                    <span class="product-search-add-text">Add to cart</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </main>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Flower Island</h3>
-                    <p>Your trusted source for fresh, beautiful flowers since 2020.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#flowers">Shop Flowers</a></li>
-                        <li><a href="#best-sellers">Best Sellers</a></li>
-                        <li><a href="#latest-posts">Blog</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Return Policy</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Track Order</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li>📧 hello@flowerisland.com</li>
-                        <li>📞 1-800-FLOWERS</li>
-                        <li>📍 123 Garden Street, Bloom City</li>
-                        <li>🕐 Mon-Fri: 9AM-6PM</li>
-                    </ul>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <h3>No products found</h3>
+                    <p>Try searching with different keywords</p>
                 </div>
             </div>
-        </footer>
-    </body>
-</html>
-
-<script>
-        // Product Search Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const searchInput = document.getElementById('mainSearchInput');
-            const filterBtn = document.getElementById('filterBtn');
-            const productCards = document.querySelectorAll('.product-search-card');
-            const noResults = document.getElementById('noResults');
-            
-            // Filter functionality
-            filterBtn.addEventListener('click', function() {
-                // Toggle filter button state
-                this.classList.toggle('active');
-                
-                // Here you can implement filter panel logic
-                console.log('Filter button clicked');
-                
-                // Example: Show/hide filter options panel
-                // You can expand this with actual filter options
-                if (this.classList.contains('active')) {
-                    this.style.borderColor = '#F1A43D';
-                    this.style.color = '#F1A43D';
-                    this.style.background = 'rgba(241, 164, 61, 0.1)';
-                    // You could show a filter panel here
-                } else {
-                    this.style.borderColor = '#E5E7EB';
-                    this.style.color = '#6B7280';
-                    this.style.background = 'white';
-                    // Hide filter panel
-                }
-            });
-            
-            // Search function
-            function performSearch() {
-                const query = searchInput.value.trim().toLowerCase();
-                let visibleCount = 0;
-                
-                productCards.forEach(card => {
-                    const productName = card.getAttribute('data-name').toLowerCase();
-                    
-                    if (query === '' || productName.includes(query)) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                // Show/hide no results message
-                if (visibleCount === 0 && query !== '') {
-                    noResults.style.display = 'block';
-                } else {
-                    noResults.style.display = 'none';
-                }
-            }
-            
-            // Event listeners
-            searchInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    performSearch();
-                }
-            });
-            
-            // Real-time search
-            searchInput.addEventListener('input', function() {
-                if (this.value.trim().length > 2 || this.value.trim() === '') {
-                    performSearch();
-                }
-            });
-            
-            // Clear search on escape
-            searchInput.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    this.value = '';
-                    performSearch();
-                    this.blur();
-                }
-            });
-            
-            // Add to cart functionality
-            const addButtons = document.querySelectorAll('.product-search-add-btn');
-            let cartCount = 0;
-            
-            addButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const product = this.getAttribute('data-product');
-                    const price = this.getAttribute('data-price');
-                    
-                    // Update cart count (visual feedback)
-                    cartCount++;
-                    const cartButton = document.querySelector('.btn-cart');
-                    
-                    // Visual feedback
-                    this.textContent = 'Added!';
-                    this.style.backgroundColor = '#10B981';
-                    this.disabled = true;
-                    
-                    // Reset button after 2 seconds
-                    setTimeout(() => {
-                        this.textContent = 'Add to cart';
-                        this.style.backgroundColor = '';
-                        this.disabled = false;
-                    }, 2000);
-                    
-                    console.log(`Added to cart: ${product} - ${price}`);
-                    console.log(`Cart count: ${cartCount}`);
-                    
-                    // You can add cart update logic here
-                    // updateCartDisplay(cartCount);
-                });
-            });
-        });
-    </script>
-    
-    <!-- Mobile Menu Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-            const mobileNav = document.getElementById('mobileNav');
-            const mobileNavClose = document.getElementById('mobileNavClose');
-            const mobileNavOverlay = document.getElementById('mobileNavOverlay');
-            
-            // Open mobile menu
-            mobileMenuToggle.addEventListener('click', function() {
-                mobileNav.classList.add('active');
-                mobileNavOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-            
-            // Close mobile menu
-            function closeMobileMenu() {
-                mobileNav.classList.remove('active');
-                mobileNavOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            
-            // Close menu when clicking close button
-            mobileNavClose.addEventListener('click', closeMobileMenu);
-            
-            // Close menu when clicking overlay
-            mobileNavOverlay.addEventListener('click', closeMobileMenu);
-            
-            // Close menu when clicking on links
-            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', closeMobileMenu);
-            });
-            
-            // Close menu on escape key
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
-                    closeMobileMenu();
-                }
-            });
-        });
-    </script>
+        </section>
+    </main>
