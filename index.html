@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Island - Fresh Flowers for Every Occasion</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <div id="header"></div>
@@ -14,8 +13,6 @@
     <div id="footer"></div>
 
 </body>
-<script src="auth.js"></script>
-<script src="cart.js"></script>
 <script src="search.js"></script>
 <script>
     // Mobile Menu Functionality
@@ -24,6 +21,9 @@
         const mobileNav = document.getElementById('mobileNav');
         const mobileNavClose = document.getElementById('mobileNavClose');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        if (!mobileMenuToggle || !mobileNav || !mobileNavClose) {
+            return;
+        }
         
         // Create overlay
         const overlay = document.createElement('div');
@@ -139,28 +139,106 @@
             document.body.style.overflow = '';
         }
     }
-    
+</script>
+<script>
+    // Загрузка header.html
+    async function loadPartial(targetId, filePath) {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`${filePath}: ${response.status}`);
+        target.outerHTML = await response.text();
+    }
+
+    async function loadPageContent(filePath) {
+        const target = document.getElementById('page-content');
+        if (!target) return;
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`${filePath}: ${response.status}`);
+        const html = await response.text();
+
+        const parsed = new DOMParser().parseFromString(html, 'text/html');
+        const body = parsed.body;
+        if (body) {
+            body.querySelectorAll(
+                'header, .header, footer, .footer, nav#mobileNav, .mobile-nav, #mobileNavOverlay, .mobile-nav-overlay, nav.desktop-nav, script, link, style'
+            ).forEach((el) => el.remove());
+
+            const main = body.querySelector('main');
+            if (main) {
+                let resultHtml = main.outerHTML;
+                let node = main.nextSibling;
+                while (node) {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        const el = node;
+                        if (!el.matches('header, .header, footer, .footer, nav, script, link, style')) {
+                            resultHtml += el.outerHTML;
+                        }
+                    }
+                    node = node.nextSibling;
+                }
+                target.outerHTML = resultHtml;
+                return;
+            }
+
+            const cleaned = body.innerHTML.trim();
+            target.outerHTML = cleaned || html;
+            return;
+        }
+
+        target.outerHTML = html;
+    }
+
+    function getPageContentFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const value = params.get('page-content');
+        if (!value) return null;
+        if (value.includes('..') || value.includes('://') || value.startsWith('/')) return null;
+        return value;
+    }
+
     // Initialize cart functionality
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            await loadPartial('header', 'header.html');
+            await loadPartial('nav', 'nav.html');
+            const pageContent = getPageContentFromUrl() || 'main.html';
+            await loadPageContent(pageContent);
+
+            document.querySelectorAll('.header').forEach((el, idx) => {
+                if (idx > 0) el.remove();
+            });
+            document.querySelectorAll('nav#mobileNav, nav.mobile-nav').forEach((el, idx) => {
+                if (idx > 0) el.remove();
+            });
+            document.querySelectorAll('#mobileNavOverlay, .mobile-nav-overlay').forEach((el, idx) => {
+                if (idx > 0) el.remove();
+            });
+        } catch (error) {
+            console.error('Partial не загрузился:', error);
+        }
+        
         // Инициализируем мобильное меню
         const mobileMenuManager = new MobileMenuManager();
         
-        const cartManager = new CartManager();
+        const cartManager = (typeof CartManager !== 'undefined') ? new CartManager() : null;
         
-        // Add to cart functionality for all add to cart buttons
-        const addToCartBtns = document.querySelectorAll('.btn-add-cart');
-        addToCartBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const product = {
-                    id: parseInt(btn.dataset.productId),
-                    name: btn.dataset.productName,
-                    price: parseFloat(btn.dataset.productPrice),
-                    image: btn.dataset.productImage,
-                    description: `${btn.dataset.productName.toLowerCase()} flower`
-                };
-                cartManager.addToCart(product);
+        if (cartManager) {
+            // Add to cart functionality for all add to cart buttons
+            const addToCartBtns = document.querySelectorAll('.btn-add-cart');
+            addToCartBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const product = {
+                        id: parseInt(btn.dataset.productId),
+                        name: btn.dataset.productName,
+                        price: parseFloat(btn.dataset.productPrice),
+                        image: btn.dataset.productImage,
+                        description: `${btn.dataset.productName.toLowerCase()} flower`
+                    };
+                    cartManager.addToCart(product);
+                });
             });
-        });
+        }
     });
 </script>
 
