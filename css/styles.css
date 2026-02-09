@@ -25,6 +25,7 @@ body {
 header {
   background: #F1A43D;
   border-bottom: 1px solid #E5E7EB;
+  position: relative;
 }
 
 .header-row-1 {
@@ -33,6 +34,7 @@ header {
   justify-content: space-between;
   gap: 16px;
   padding: 16px 0;
+  flex-wrap: wrap;
 }
 
 .logo-text {
@@ -42,13 +44,11 @@ header {
   font-weight: 500;
   line-height: 38px;
   text-align: left;
-  margin-left: 91px;
 }
 
 .header-actions {
   display: flex;
   gap: 12px;
-  margin-right: 20px;
 }
 
 .header-actions button {
@@ -90,6 +90,8 @@ header {
   gap: 24px;
   list-style: none;
   padding: 12px 0;
+  margin: 0;
+  align-items: center;
 }
 
 .nav-menu a {
@@ -107,20 +109,22 @@ header {
 /* ================= MOBILE MENU ================= */
 .mobile-menu-toggle {
   display: none;
-  background: none;
-  border: none;
   cursor: pointer;
-  padding: 8px;
+  background: transparent;
+  border: none;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1100;
 }
 
 .hamburger-line {
-  width: 24px;
-  height: 2px;
+  width: 26px;
+  height: 3px;
   background: #1F2937;
-  margin: 4px 0;
+  margin: 3px 0;
+  border-radius: 999px;
 }
 
 .mobile-nav {
@@ -1965,14 +1969,9 @@ main.product-detail .recommendation-card img {
   }
 
   .mobile-menu-toggle {
-    display: block;
-  }
-  .header-row-1 > div:first-child {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    order: -1;
+    position: static;
+    margin-right: 8px;
   }
   
   .desktop-search {
@@ -1981,7 +1980,62 @@ main.product-detail .recommendation-card img {
     margin-top: 8px;
     order: 0;
   }
-  
+
+  .header-row-1 {
+    gap: 12px;
+  }
+
+  .mobile-menu-toggle {
+    order: 0;
+  }
+
+  .logo {
+    order: 1;
+    flex: 1 1 auto;
+  }
+
+  .logo-text {
+    font-size: 26px;
+  }
+
+  .header-actions {
+    order: 2;
+  }
+
+  .desktop-search {
+    order: 3;
+  }
+
+  /* ---------- HERO (MOBILE) ---------- */
+  .hero-section {
+    padding: 32px 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-gallery .gallery-grid {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
   /* ---------- HERO ---------- */
   .hero-container {
     grid-template-columns: 1fr;
